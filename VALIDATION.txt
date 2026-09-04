@@ -1,0 +1,19 @@
+VALIDATION OF SIMPLE RPS
+========================
+
+Source validation performed before packaging:
+
+1. server.cpp compiled successfully with g++ C++17 -Wall -Wextra -Wpedantic.
+2. client.cpp compiled successfully with g++ C++17 -Wall -Wextra -Wpedantic.
+3. Real localhost TCP test completed with 1 server + 2 clients.
+4. Three-round match completed successfully; server returned exit code 0.
+5. Player 1 won 3-0 and both clients received GAME OVER correctly.
+6. Player 2 score display was checked and showed 0-3 (you-opponent).
+7. Draw handling was tested.
+8. Invalid input (X) was rejected and the client requested R/P/S again.
+9. Player 2 move/result mapping was checked.
+
+Important:
+The actual Windows build was not executed in this Linux environment because a
+Windows compiler/runtime is not installed here. The Windows source branch uses
+standard Winsock2 APIs and the provided build script supports MSVC and MinGW.
